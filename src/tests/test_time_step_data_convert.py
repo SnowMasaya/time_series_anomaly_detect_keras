@@ -57,6 +57,7 @@ class TestTime_step_data_convert(TestCase):
                          filecmp.cmp(y_test_normalize_file,
                                      'tests/test_data/' +
                                      y_test_normalize_file))
+        x_train = x_train.reshape(x_train.shape[0], x_train.shape[1])
         x = scaler.inverse_transform(x_train)
         y = scaler.inverse_transform(y_train)
         np.save(x_file, x)

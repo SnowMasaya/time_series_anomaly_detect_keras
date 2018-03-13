@@ -21,6 +21,7 @@ def time_step_data_convert(original_data: np.array,
         Y[i] = original_data[i + num_time_steps + 1]
     X = scaler.fit_transform(X)
     Y = scaler.fit_transform(Y)
+    X = np.expand_dims(X, axis=2)
     sp = int(train_size * data_size)
     Xtrain, Xtest, Ytrain, Ytest = X[0:sp], X[sp:], Y[0:sp], Y[sp:]
     train_size = (Xtrain.shape[0] // batch_size) * batch_size

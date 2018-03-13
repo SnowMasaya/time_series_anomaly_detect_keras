@@ -5,6 +5,14 @@ import numpy as np
 
 
 def smooth(x, window_len: int=11, window: str='hanning'):
+    """
+    Reference:
+        http://scipy-cookbook.readthedocs.io/items/SignalSmooth.html
+    :param x: 
+    :param window_len: 
+    :param window: 
+    :return: 
+    """
     if x.ndim != 1:
         raise(ValueError, "smooth only accepts 1 dimension arrays.")
 
