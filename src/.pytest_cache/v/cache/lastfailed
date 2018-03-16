@@ -1,1 +1,6 @@
-{}
+{
+  "tests/test_dataTransform.py": true,
+  "tests/test_smooth.py": true,
+  "tests/test_time_step_data_convert.py": true,
+  "tests/test_trainModel.py": true
+}
